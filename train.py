@@ -498,9 +498,51 @@ and variable-length sequences.
         diff_val, diff_pct, improvement_text
     )
     
-    # Save report
+    # Save report (Text format)
     with open('results/experiment_report.txt', 'w', encoding='utf-8') as f:
         f.write(report)
+    
+    # Save HTML report
+    html_report = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment Report - ATML Lab 7</title>
+    <style>
+        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 30px; color: #333; background-color: #f9f9f9; }}
+        .header {{ text-align: center; margin-bottom: 30px; border-bottom: 2px solid #eaeaea; padding-bottom: 20px; }}
+        h1, h2 {{ color: #2c3e50; }}
+        pre {{ background: #fff; padding: 20px; border-radius: 8px; overflow-x: auto; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05); font-family: 'Consolas', 'Monaco', monospace; white-space: pre-wrap; }}
+        .images {{ display: flex; flex-direction: column; gap: 30px; margin-top: 40px; }}
+        .image-card {{ background: white; padding: 15px; border-radius: 8px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }}
+        img {{ max-width: 100%; height: auto; border-radius: 4px; display: block; margin: 0 auto; }}
+        .img-title {{ text-align: center; font-weight: bold; margin-bottom: 15px; color: #555; }}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Encoder-Decoder Architecture Comparison</h1>
+        <h2>English-to-Hindi Machine Translation</h2>
+    </div>
+    
+    <h2>Experiment Summary</h2>
+    <pre>{report}</pre>
+    
+    <div class="images">
+        <h2>Visualizations</h2>
+        <div class="image-card">
+            <div class="img-title">Training & Validation Losses</div>
+            <img src="training_losses.png" alt="Training Losses Plot">
+        </div>
+        <div class="image-card">
+            <div class="img-title">Model Comparison Plot</div>
+            <img src="model_comparison_plot.png" alt="Model Comparison Plot">
+        </div>
+    </div>
+</body>
+</html>"""
+    with open('results/experiment_report.html', 'w', encoding='utf-8') as f:
+        f.write(html_report)
     
     print(report)
 
