@@ -1,4 +1,4 @@
-# I020_ATML_Lab7: Encoder-Decoder Architecture with Attention
+# I026_ATML_Lab7: Encoder-Decoder Architecture with Attention
 ## English-to-Hindi Machine Translation
 
 ## 📋 Project Overview
