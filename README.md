@@ -75,6 +75,11 @@ This will:
 
 ## 📊 Experiment Results
 
+### 🌐 Live Output
+
+> **[▶ View Interactive Results Dashboard](https://nabiyai.github.io/I026_ATML_Lab7/view_results.html)**  
+> An interactive HTML dashboard with training loss curves, model comparison charts, and a full performance table.
+
 ### Models Implemented
 
 #### 1. Simple Encoder-Decoder (Baseline)
