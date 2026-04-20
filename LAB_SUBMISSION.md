@@ -2,9 +2,8 @@
 ## English-to-Hindi Machine Translation
 ## PART B - Student Submission
 
-**Student Name:** _____________________  
-**Roll Number:** _____________________  
-**Date:** _____________________  
+**Student Name:** ______Nabiya Inamdar_______________  
+**Roll Number:** I026
 
 ---
 
